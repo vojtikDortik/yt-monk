@@ -1,6 +1,11 @@
+# Ignore the .venv folder
+.venv/
+
+__pycache__
+
 # Ignore node_modules folder
 node_modules/
+
 # Ignore log files
 *.log
 
-.venv/

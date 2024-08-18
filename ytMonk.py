@@ -287,10 +287,10 @@ class YT_Downloader:
             name_variables_dict['<videoTitle>'] = self.getVideoTitle(url)
         else: name_variables_dict['<videoTitle>'] = 'badVideoTitle'
         name_variables_dict['<selectedCodec>'] = self.options.codec
-        name_variables_dict['<selectedQuality>'] = self.options.quality
+        name_variables_dict['<selectedQuality>'] = self.options.quality + 'p'
         
-        name_variables_dict['2160'] = '4k'
-        name_variables_dict['max'] = '8k'
+        name_variables_dict['2160p'] = '4k'
+        name_variables_dict['maxp'] = '8k'
 
         for variable in name_variables_dict:
             filename = filename.replace(variable, name_variables_dict[variable])
@@ -344,7 +344,6 @@ class YT_Downloader:
 
 if __name__ == '__main__':
     downloader = YT_Downloader()
-    downloader.options.download_directory = 'downloads'
     downloader.main()
 
     #highlight('Progress 33.3 %', divider='-=||=-', divider_lenght=12)

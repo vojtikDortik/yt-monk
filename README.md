@@ -7,7 +7,7 @@
 <div align="center">
 
 
-<h1 align="center" style="font-size: 40px">YT Monk</h1>
+<h1 align="center" style="font-size: 40px">YouTube Monk</h1>
 
 
   <p align="center">

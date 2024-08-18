@@ -27,7 +27,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="important">Important</a>
+      <a href="#important">Important</a>
     </li>
     <li>
       <a href="#about-the-project">About The Project</a>

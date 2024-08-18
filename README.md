@@ -27,50 +27,46 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="Important">Important</a>
+    </li>
+    <li>
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 ## Important
 
-This is my first project uploaded to Github, so there might be mistakes
+This is my first project uploaded to Github. If you find a mistake or just anything you don't like, just let me know and I'll try to fix it.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This little project started when I wanted to download a playlist from YouTube. For downloading single videos, I always use [Cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
+This little project began when I wanted to download a playlist from YouTube. For downloading single videos, I always use [cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
 
-<img src="images/cobalt.png" width=auto height=200>
+<img src="images/cobalt.png" width=100% height=auto>
 
-([Cobalt.tools](https://cobalt.tools) website)
+([cobalt](https://cobalt.tools) website)
 
 So I decided to make my own YT video and playlist downloader in Python.
 
 ### Making the program
-First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [Cobalt.tools](https://cobalt.tools), because I wanted to know how do they download videos:
+First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [cobalt](https://cobalt.tools), because I wanted to know how do they download videos:
 
-<img src="images/network.png" width=auto height=180>
-<img src="images/request.png" width=auto height=200>
+<img src="images/network.png" width=100% height=auto>
+<img src="images/request.png" width=100% height=auto>
 
 (the network traffic capture)
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="images/code1.png" width=auto height=600>
-<img src="images/code2.png" width=auto height=170>
+<img src="images/code1.png" width=100% height=auto>
+<img src="images/code2.png" width=100% height=auto>
 
 (JavaScript code of the website)
 
@@ -103,7 +99,7 @@ Then I just made some more functions and it was done.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Now I will show you how to use my code as an application or as a python library.
+Now I'll show you how to use my code as an application and also as a python library.
 
 ### Getting the app
 

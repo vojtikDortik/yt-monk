@@ -44,7 +44,9 @@
   </ol>
 </details>
 
+## Important
 
+This is my first project uploaded to Github, so there might be mistakes
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project

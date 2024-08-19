@@ -66,7 +66,7 @@ First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="images/code1.png" width=100% height=auto style="max-width: 500px">
+<img src="images/code1.png" width=100% height=auto style="max-width: 700px">
 
 <img src="images/code2.png" width=100% height=auto style="max-width: 450px">
 

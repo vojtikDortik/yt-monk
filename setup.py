@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="yt-monk",
-    version="0.1.0",
+    name="yt_monk",
+    version="0.1.0-alpha",
     author="Vojtech",  # Add your name
     author_email="officialvojta@gmail.com",  # Add your email
     description="A simple Python package for downloading videos and playlists from YouTube",
     long_description=open('README.md').read(),  # Add long description from README
     long_description_content_type='text/markdown',  # Specify the format of the long description
-    url="https://github.com/yourusername/yt-monk",  # Add the URL of the project
+    url="https://github.com/vojtikDortik/yt-monk",  # Add the URL of the project
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

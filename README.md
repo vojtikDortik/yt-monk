@@ -90,9 +90,15 @@ def captureStream(self, stream_url, file_path):
 ```
 
 
-Then I just made some more functions and it was done.
+Then I just made some more functions.
 
 
+
+### To-do 
+- [ ] Make python package work
+- [ ] Upload package to PyPi
+- [ ] Make cli app
+- [x] Reorganize files
 
 
 

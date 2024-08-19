@@ -307,7 +307,7 @@ class YT_Downloader:
 
 if __name__ == '__main__':
     downloader = YT_Downloader()
-    downloader.main()
+    main()
 
     # tests
     # https://www.youtube.com/playlist?list=PLx0VWrfG-rXnSgP2YP7kKTcDf45RjXiUu

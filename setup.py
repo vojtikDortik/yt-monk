@@ -1,14 +1,34 @@
 from setuptools import setup, find_packages
 
 setup(
-name="yt-monk",
-version="0.1.0",
-description="A simple Python package for downloading videos and playlists from youtube",
-packages=find_packages(),
-classifiers=[
-"Programming Language :: Python :: 3",
-"License :: OSI Approved :: MIT License",
-"Operating System :: OS Independent",
-],
-python_requires=">=3.6",
+    name="yt-monk",
+    version="0.1.0",
+    author="Vojtech",  # Add your name
+    author_email="officialvojta@gmail.com",  # Add your email
+    description="A simple Python package for downloading videos and playlists from YouTube",
+    long_description=open('README.md').read(),  # Add long description from README
+    long_description_content_type='text/markdown',  # Specify the format of the long description
+    url="https://github.com/yourusername/yt-monk",  # Add the URL of the project
+    packages=find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Development Status :: 3 - Alpha",  # Change based on your development status
+        "Intended Audience :: Developers",  # Specify the intended audience
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    python_requires=">=3.6",
+    install_requires=[
+        'beautifulsoup4>=4.9.0',  # Add your package's dependencies here
+        'requests>=2.24.0',
+        'pytube>=10.0.0'
+    ],
+    entry_points={
+        'console_scripts': [
+            'yt-monk=yt_monk.cli:main',  # Replace `your_module` and `main` with your module and function if applicable
+        ],
+    },
+    include_package_data=True,  # Include additional files specified in MANIFEST.in
+    keywords="youtube downloader video playlist",
 )

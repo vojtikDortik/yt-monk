@@ -8,29 +8,9 @@ from shutil import rmtree
 from pathlib import Path
 
 
-
-def highlight(text, divider='', divider_lenght=None):
-    print()
-    if divider_lenght is None:
-        print(divider * len(text))
-        print(text. center(len(divider * len(text))))
-        print(divider * len(text))
-    else:
-        print(divider * divider_lenght)
-        print(text.center(len(divider_lenght * divider)))
-        print(divider * divider_lenght)
-
-
-
-
-
-
-
-
 class YT_Downloader:
-    def __init__(self): # , input_info='prompt'
+    def __init__(self):
 
-        #self.input = input_info # input muze byt z json souboru takze 'json' nebo manualne zadavano takze 'prompt'
         self.all_file_extensions = ["mp3", "ogg", "wav", "opus", 'mp4', 'webm']
 
         self.api_url = 'https://olly.imput.net/api/json'
@@ -45,10 +25,6 @@ class YT_Downloader:
             self.allowed_quality = ["max", "2160", "1440", "1080", "720", "480", "360", "240", "144"]
             self.allowed_codecs = ["h264", "av1", "vp9"]
             self.allowed_audio_formats = ["mp3", "ogg", "wav", "opus"]
-
-
-
-
 
             self.default = self.Default(self)
 
@@ -83,10 +59,6 @@ class YT_Downloader:
                 self.options.mute_audio = self.mute_audio
                 self.options.overwrite_files = self.overwrite_files
 
-                # vCodec: ["h264", "av1", "vp9"],
-                # vQuality: ["720", "max", "2160", "1440", "1080", "480", "360", "240", "144"],
-                # aFormat: ["mp3", "best", "ogg", "wav", "opus"],
-                # audioMode: ["false", "true"],
 
         def useJson(self):
             with open('options.json', 'r') as f:
@@ -161,7 +133,6 @@ class YT_Downloader:
 
     def getUrlType(self, url):
         if url is None: return None
-        '''https://www.youtube.com/playlist?list=PLkyCXOka-zVGSmP4_FIvXBVm96XgB83Tt'''
         if 'https://www.youtube.com/playlist?' in url:
             return 'playlist'
         elif 'https://www.youtube.com/watch' in url:
@@ -170,7 +141,6 @@ class YT_Downloader:
             return None
         
     def correctUrl(self, url):
-        '''https://www.youtube.com/watch?v=O_ogk8WM-7E'''
         if 'youtube.com/' not in url: return None
         if 'https://www.' not in url and url.startswith('youtube.com/'):
             #print(url)
@@ -194,13 +164,11 @@ class YT_Downloader:
             if download_directory is None:
                 return
 
-        #highlight(f'Progress 0 %', '-=||=-', divider_lenght=12)
         for i in range(len(playlist)):
             print(f'-- Downloading video ({i+1}/{len(playlist)}) --')
             if filename_pattern is None: self.downloadVideo(playlist[i], download_directory=download_directory)
             elif isinstance(filename_pattern, str): self.downloadVideo(playlist[i], download_directory=download_directory, filename=filename_pattern.replace('numberVar', str(i+1)))
             else: print('something wrong with filepattern')
-            #highlight(f'Progress {round((i + 1) / (len(playlist) / 100), 1)} %', '-=||=-', divider_lenght=12)
             print()
 
 
@@ -233,10 +201,9 @@ class YT_Downloader:
     def getStreamUrl(self, url):
         data = {
             "url": url,
-            "vCodec": self.options.codec,  # proste codec takze h264, av1 a vp9
+            "vCodec": self.options.codec,
             "vQuality": self.options.quality,
-            # proste rozliseni napr 144p 240p 360p 480p 720p 1080p 1440p 4k 8k ale zapis v pixelech napr 144 240 360 480 720 1080 1440 2160 max
-            "aFormat": self.options.audio_format,  # Replace with appropriate value or remove if not needed
+            "aFormat": self.options.audio_format,  
             "filenamePattern": "classic",
             "isAudioOnly": True if self.options.file_type == 'audio' else False,
             "isAudioMuted": self.options.mute_audio,  
@@ -254,7 +221,6 @@ class YT_Downloader:
                 done = True
                 break
             elif response['status'] == 'error':
-                #print('error:', response['text'])
                 if response['text'] == "i couldn't find anything to download with your settings. try another codec or quality in settings!" and data['vCodec'] == 'av1':
                     data['vCodec'] = 'h264'
         if not done: print("Couldn't download the video")
@@ -319,9 +285,6 @@ class YT_Downloader:
 
 
 
-
-
-
     def getVideoTitle(self, url):
         video = YouTube(url)
         return video.title
@@ -346,12 +309,7 @@ if __name__ == '__main__':
     downloader = YT_Downloader()
     downloader.main()
 
-    #highlight('Progress 33.3 %', divider='-=||=-', divider_lenght=12)
-
-    #downloader.downloadPlaylist('https://www.youtube.com/playlist?list=PLA8B8OMyRkkavyufP8N6Jx2wnzecySak2', new_directory_name='Jára Cimrman')
-
-
-
+    # tests
     # https://www.youtube.com/playlist?list=PLx0VWrfG-rXnSgP2YP7kKTcDf45RjXiUu
     # https://www.youtube.com/watch?v=C7SdOgyOepw&list=PLx0VWrfG-rXnSgP2YP7kKTcDf45RjXiUu
 

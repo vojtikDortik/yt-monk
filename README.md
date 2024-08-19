@@ -49,7 +49,7 @@ This is my first project uploaded to Github. If you find a mistake or just anyth
 
 This little project began when I wanted to download a playlist from YouTube. For downloading single videos, I always use [cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
 
-<img src="images/cobalt.png" width=100% height=auto style="max-width: 1000px">
+<img src="images/cobalt.png" width=100% height=auto style="max-width: 700px">
 
 ([cobalt](https://cobalt.tools) website)
 
@@ -58,17 +58,17 @@ So I decided to make my own YT video and playlist downloader in Python.
 ### Making the program
 First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [cobalt](https://cobalt.tools), because I wanted to know how do they download videos:
 
-<img src="images/network.png" width=100% height=auto style="max-width: 1000px">
+<img src="images/network.png" width=100% height=auto style="max-width: 700px">
 
-<img src="images/request.png" width=100% height=auto style="max-width: 1000px">
+<img src="images/request.png" width=100% height=auto style="max-width: 700px">
 
 (the network traffic capture)
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="images/code1.png" width=100% height=auto style="max-width: 1000px">
+<img src="images/code1.png" width=100% height=auto style="max-width: 700px">
 
-<img src="images/code2.png" width=100% height=auto style="max-width: 1000px">
+<img src="images/code2.png" width=100% height=auto style="max-width: 700px">
 
 (some of the JavaScript code of the website)
 

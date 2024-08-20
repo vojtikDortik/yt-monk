@@ -98,6 +98,7 @@ Then I just made some more functions.
 - [ ] Make python package work
 - [ ] Upload package to PyPi
 - [ ] Make cli app
+- [ ] Make a js chrome extension 
 - [x] Reorganize files
 
 

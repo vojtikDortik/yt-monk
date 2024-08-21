@@ -100,6 +100,7 @@ Then I just made some more functions.
 - [ ] Make cli app
 - [ ] Make a js chrome extension 
 - [x] Reorganize files
+- [x] Make an exe app
 
 
 
@@ -108,42 +109,33 @@ Then I just made some more functions.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Now I'll show you how to use my code as an application and also as a python library.
+Now you have 3 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that or you can install it as a python library and use it in your code.
 
-### Getting the app
+### Getting the Windows executable
 
-1. Clone the repo:
+1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
+2. Run it on Windows
+3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
-    ```sh
-    git clone https://github.com/vojtikDortik/yt-monk.git
+    If you realy don't trust it (I get it), you can download the python code.
+
+### Getting the Python file
+
+1. Download [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py)
+2. Run it using python:
+
+    ```python
+    python yt_monk.py
     ```
 
-2. Install required libraries:
 
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3. Edit the `options.json` file. (you can leave it on the default options)
 
 
 
 
 ### Getting the library
 
-1. Download these three files:
-
-    * `ytMonk.py`
-    * `options.json`
-    * `requirements.txt`
-
-2. Install required libraries:
-
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3. Edit the `options.json` file. (you can leave it on the default options)
+I am stil working on getting it uploaded to PyPi. That is it for now.
 
 
 
@@ -158,12 +150,7 @@ Now I'll show you how to use my code as an application and also as a python libr
 Here are some basic examples of using my code
 
 ### Using as an application
-When you run the `ytMonk.py` file
-  ```sh
-  python ytMonk.py
-  ```
-
-you will get prompted to enter the URL
+When you run `yt_monk.py` or `yt_monk.exe` you will get prompted to enter the URL
 
 ```
 Enter video URL (q to quit): 
@@ -175,9 +162,9 @@ You can enter video or playlist URL (the program will detect the URL type) or `q
 
 Import the library and define the `downloader` object:
 ```python
-import ytMonk
+import yt_monk
 
-downloader = ytMonk.YT_Downloader()
+downloader = yt_monk.YT_Downloader()
 ```
 
 Downloading a video:
@@ -192,7 +179,7 @@ downloader.downloadVideo(video_url)
 Downloading a playlist:
 
 ```python
-playlist_url = 'https://www.youtube.com/playlist?list=PL2_OBreMn7FrDzinpFROg9vwc9FI_F6ev' 
+playlist_url = 'https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi' 
 
 downloader.downloadPlaylist(playlist_url)
 ```

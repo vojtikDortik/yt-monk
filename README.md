@@ -121,8 +121,14 @@ Now you have 3 options: download it as an exe file and run it on Windows without
 
 ### Getting the Python file
 
-1. Download [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py)
-2. Run it using python:
+1. Download [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) and [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)
+
+2. Install [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt) using pip:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. Run it using python:
 
     ```python
     python yt_monk.py

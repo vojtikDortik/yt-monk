@@ -16,6 +16,7 @@
   "mute_audio": false,
 
   "overwrite_files": true,
-  "download_directory": "<defaultDirectory>"
+  "download_directory": "<defaultDirectory>",
+  "ask_for_input": false
 
 }

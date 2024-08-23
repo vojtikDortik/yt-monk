@@ -15,12 +15,10 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Development Status :: 3 - Alpha",  # Change based on your development status
-        "Intended Audience :: Developers",  # Specify the intended audience
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     python_requires=">=3.6",
-    install_requires=[
-        'beautifulsoup4>=4.9.0',  # Add your package's dependencies here
+    install_requires=[  # Add your package's dependencies here
         'requests>=2.24.0',
         'pytube>=10.0.0'
     ],

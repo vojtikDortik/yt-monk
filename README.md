@@ -49,7 +49,7 @@ This is my first project uploaded to Github. If you find a mistake or just anyth
 
 This little project began when I wanted to download a playlist from YouTube. For downloading single videos, I always use [cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
 
-<img src="images/cobalt.png" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/cobalt.png" width=100% height=auto style="max-width: 800px">
 
 ([cobalt](https://cobalt.tools) website)
 
@@ -58,17 +58,17 @@ So I decided to make my own YT video and playlist downloader in Python.
 ### Making the program
 First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [cobalt](https://cobalt.tools), because I wanted to know how do they download videos:
 
-<img src="images/network.png" width=auto height=100% style="max-height: 200px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/network.png" width=auto height=100% style="max-height: 200px">
 
-<img src="images/request.png" width=auto height=100% style="max-height: 250px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/request.png" width=auto height=100% style="max-height: 250px">
 
 (the network traffic capture)
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="images/code1.png" width=100% height=auto style="max-width: 700px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/code1.png" width=100% height=auto style="max-width: 700px">
 
-<img src="images/code2.png" width=100% height=auto style="max-width: 450px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/code2.png" width=100% height=auto style="max-width: 450px">
 
 (some of the JavaScript code of the website)
 
@@ -112,13 +112,24 @@ Then I just made some more functions.
 
 Now you have 3 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that or you can install it as a python library and use it in your code.
 
+
+### Getting the library
+
+To install [the library from PyPi](https://pypi.org/project/yt-monk/), just run this command
+
+```sh
+pip install yt-monk
+```
+
+
+
 ### Getting the Windows executable
 
 1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe)
 2. Run it on Windows
 3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
-    If you realy don't trust it (I get it), you can download the python code.
+    If you realy don't trust it (I get it), you can download the python code or the [PyPi package](https://pypi.org/project/yt-monk/)
 
 ### Getting the Python file
 
@@ -140,9 +151,7 @@ Now you have 3 options: download it as an exe file and run it on Windows without
 
 
 
-### Getting the library
 
-I am stil working on getting it uploaded to PyPi. That is it for now.
 
 
 
@@ -157,9 +166,9 @@ I am stil working on getting it uploaded to PyPi. That is it for now.
 Here are some basic examples of using my code
 
 ### Using as an application
-When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe) you will get prompted to enter the URL
+When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
 
-<img src="images/cmd_usage.png" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/cmd_usage.png" width=100% height=auto style="max-width: 800px">
 
 You can enter video or playlist URL (the program will detect the URL type) or `q` to quit the loop.
 
@@ -172,8 +181,36 @@ Import the library and define the `downloader` object:
 ```python
 import yt_monk
 
-downloader = yt_monk.YT_Downloader()
+downloader = yt_monk.Downloader()
 ```
+
+Setting the options:
+
+```python
+downloader = yt_monk.Downloader(quality='720', codec='av1')
+```
+Here are all the options you can set:
+
+codec -> `"h264"`, `"av1"`, `"vp9"`
+
+quality -> `"max"`, `"2160"`, `"1440"`, `"1080"`, `"720"`, `"480"`, `"360"`, `"240"`, `"144"`
+
+file_name -> this can be set to any valid filename. you can use placeholders (`<videoTitle>`, `<selectedQuality>`, `<selectedCodec>`)
+
+file_type -> the file type can be either `"video"` or `"audio"`
+
+audio_format -> `"mp3"`, `"ogg"`, `"wav"`, `"opus"`
+
+mute_audio -> `True` or `False`
+
+overwrite_files -> this just tells the program to overwrite existing files (`True` or `False`)
+
+overwrite_directories -> this just tells the program to overwrite existing directories (`True` or `False`)
+
+download_directory -> the directory that the downloaded files will be saved to. you can use placeholder for default download directory like `C:\users\name\Downloads\` on windows: `<defaultDirectory>`
+
+ask_for_input -> `True` or `False`
+
 
 Downloading a video:
 

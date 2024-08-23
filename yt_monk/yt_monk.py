@@ -435,7 +435,7 @@ class Downloader:
 
 
 if __name__ == '__main__':
-    downloader = Downloader()
+    downloader = Downloader(ask_for_input=True)
     downloader.main()
 
 

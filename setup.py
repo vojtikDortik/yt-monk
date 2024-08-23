@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="yt_monk",
-    version="0.1.0-alpha",
+    version="0.1.1-alpha",
     author="Vojtech",  # Add your name
     author_email="officialvojta@gmail.com",  # Add your email
     description="A simple Python package for downloading videos and playlists from YouTube",

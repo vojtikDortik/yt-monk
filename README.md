@@ -95,12 +95,13 @@ Then I just made some more functions.
 
 
 ### To-do 
-- [ ] Make python package work
-- [ ] Upload package to PyPi
-- [ ] Make cli app
+- [ ] Make a python package work
+- [ ] Upload the package to PyPi
+- [ ] Make a cli app
 - [ ] Make a js chrome extension 
+- [ ] Make an exe app
 - [x] Reorganize files
-- [x] Make an exe app
+
 
 
 

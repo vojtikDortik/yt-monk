@@ -3,7 +3,7 @@ name: Publish Python Package
 on:
   push:
     tags:
-      - 'v0.1.0-alpha'  # Triggers the workflow on tag push with versioning like v1.0.0
+      - 'v0.1.1-alpha'  # Triggers the workflow on tag push with versioning like v1.0.0
 
 jobs:
   build:

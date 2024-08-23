@@ -159,11 +159,12 @@ Here are some basic examples of using my code
 ### Using as an application
 When you run `yt_monk.py` or `yt_monk.exe` you will get prompted to enter the URL
 
-```
-Enter video URL (q to quit): 
-```
+<img src="images/cmd_usage.png" width=100% height=auto style="max-width: 800px">
 
 You can enter video or playlist URL (the program will detect the URL type) or `q` to quit the loop.
+
+
+
 
 ### Using as a Python library
 

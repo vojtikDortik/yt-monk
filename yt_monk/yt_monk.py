@@ -421,7 +421,7 @@ class Downloader:
 
     def main(self):
         while True:
-            url = input('\nEnter video URL (q to quit): ')
+            url = input('Enter video URL (q to quit): ')
             if url.lower() == 'q':
                 break
             try:
@@ -429,6 +429,7 @@ class Downloader:
             except Exception as e:
                 print(f'Something went wrong while downloading: \n{e}')
 
+            print()
 
 
 

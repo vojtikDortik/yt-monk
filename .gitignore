@@ -1,6 +1,9 @@
 # Ignore the .venv folder
 .venv/
 
+.vscode/
+.build/
+
 __pycache__
 
 # Ignore node_modules folder

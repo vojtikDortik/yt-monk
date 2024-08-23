@@ -114,7 +114,7 @@ Now you have 3 options: download it as an exe file and run it on Windows without
 
 ### Getting the Windows executable
 
-1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
+1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe)
 2. Run it on Windows
 3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
@@ -157,7 +157,7 @@ I am stil working on getting it uploaded to PyPi. That is it for now.
 Here are some basic examples of using my code
 
 ### Using as an application
-When you run `yt_monk.py` or `yt_monk.exe` you will get prompted to enter the URL
+When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe) you will get prompted to enter the URL
 
 <img src="images/cmd_usage.png" width=100% height=auto style="max-width: 800px">
 

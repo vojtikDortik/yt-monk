@@ -1,9 +1,6 @@
 name: Publish Python Package
 
-on:
-  push:
-    tags:
-      - 'v0.1.1-alpha'  # Triggers the workflow on tag push with versioning like v1.0.0
+on: push
 
 jobs:
   build:

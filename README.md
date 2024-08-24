@@ -42,14 +42,14 @@
 
 ## Important
 
-This is my first project uploaded to Github. If you find a mistake or just anything you don't like, just let me know and I'll try to fix it.
+This is my first project uploaded to Github and PyPi. If you find a mistake, bug or just anything you don't like, please let me know and I'll try to fix it.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 This little project began when I wanted to download a playlist from YouTube. For downloading single videos, I always use [cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/cobalt.png" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/cobalt.png?raw=true" width=100% height=auto style="max-width: 800px">
 
 ([cobalt](https://cobalt.tools) website)
 
@@ -58,17 +58,17 @@ So I decided to make my own YT video and playlist downloader in Python.
 ### Making the program
 First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [cobalt](https://cobalt.tools), because I wanted to know how do they download videos:
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/network.png" width=auto height=100% style="max-height: 200px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/network.png?raw=true" width=auto height=100% style="max-height: 200px">
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/request.png" width=auto height=100% style="max-height: 250px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/request.png?raw=true" width=auto height=100% style="max-height: 250px">
 
 (the network traffic capture)
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/code1.png" width=100% height=auto style="max-width: 700px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/code1.png?raw=true" width=100% height=auto style="max-width: 700px">
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/code2.png" width=100% height=auto style="max-width: 450px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/code2.png?raw=true" width=100% height=auto style="max-width: 450px">
 
 (some of the JavaScript code of the website)
 
@@ -95,12 +95,13 @@ Then I just made some more functions.
 
 
 ### To-do 
-- [ ] Make a python package work
-- [ ] Upload the package to PyPi
+
 - [ ] Make a cli app
 - [ ] Make a js chrome extension 
-- [ ] Make an exe app
+- [x] Make an exe app
 - [x] Reorganize files
+- [x] Make a python package work
+- [x] Upload the package to PyPi
 
 
 
@@ -168,7 +169,7 @@ Here are some basic examples of using my code
 ### Using as an application
 When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
 
-<img src="https://github.com/vojtikDortik/yt-monk/tree/master/images/cmd_usage.png" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/cmd_usage.png?raw=true" width=100% height=auto style="max-width: 800px">
 
 You can enter video or playlist URL (the program will detect the URL type) or `q` to quit the loop.
 
@@ -184,18 +185,33 @@ import yt_monk
 downloader = yt_monk.Downloader()
 ```
 
-Setting the options:
+<br>
+
+#### Setting the options:
+
+You can set it using keyword arguments when defining the object:
 
 ```python
 downloader = yt_monk.Downloader(quality='720', codec='av1')
 ```
-Here are all the options you can set:
+
+or you can set it using the `options.useCustom` function:
+
+```python
+downloader = yt_monk.Downloader()
+
+downloader.options.useCustom(quality='720', codec='av1')
+```
+
+<br>
+
+#### Here are all the options you can set:
 
 codec -> `"h264"`, `"av1"`, `"vp9"`
 
 quality -> `"max"`, `"2160"`, `"1440"`, `"1080"`, `"720"`, `"480"`, `"360"`, `"240"`, `"144"`
 
-file_name -> this can be set to any valid filename. you can use placeholders (`<videoTitle>`, `<selectedQuality>`, `<selectedCodec>`)
+file_name -> this can be set to any valid filename. you can use placeholders: `<videoTitle>`, `<selectedQuality>`, `<selectedCodec>`
 
 file_type -> the file type can be either `"video"` or `"audio"`
 
@@ -203,16 +219,34 @@ audio_format -> `"mp3"`, `"ogg"`, `"wav"`, `"opus"`
 
 mute_audio -> `True` or `False`
 
-overwrite_files -> this just tells the program to overwrite existing files (`True` or `False`)
+overwrite_files -> this tells the program to overwrite existing files: `True` or `False`
 
-overwrite_directories -> this just tells the program to overwrite existing directories (`True` or `False`)
+overwrite_directories -> this tells the program to overwrite existing directories: `True` or `False`
 
 download_directory -> the directory that the downloaded files will be saved to. you can use placeholder for default download directory like `C:\users\name\Downloads\` on windows: `<defaultDirectory>`
 
-ask_for_input -> `True` or `False`
+ask_for_input -> if enabled, the code will ask whether or not to overwrite a file or a directory: `True` or `False`
 
+<br>
 
-Downloading a video:
+#### Using JSON options file:
+Alternatively, you can use a json file to set the options. You can download an example [`options.json`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/options.json) file here. Then just tell the code to use the JSON file:
+
+```python
+downloader = yt_monk.Downloader(json_path=r'path/to/options.json')
+```
+
+or you can do it like this:
+
+```python
+downloader = yt_monk.Downloader()
+
+downloader.options.useJson(json_path=r'path/to/options.json')
+```
+
+<br>
+
+#### Downloading a video:
 
 
 ```python
@@ -220,8 +254,9 @@ video_url = 'https://www.youtube.com/watch?v=9bZkp7q19f0'
 
 downloader.downloadVideo(video_url)
 ```
+<br>
 
-Downloading a playlist:
+#### Downloading a playlist:
 
 ```python
 playlist_url = 'https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi' 
@@ -241,7 +276,7 @@ downloader.downloadPlaylist(playlist_url)
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/LICENSE.txt) for more information
 
 
 

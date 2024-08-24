@@ -1,0 +1,22 @@
+{
+  "file_type_options": ["video", "audio"],
+  "file_type": "video",
+  
+  "quality_options": ["max", "2160", "1440", "1080", "720", "480", "360", "240", "144"],
+  "quality": "1080",
+  
+  "codec_options": ["h264", "av1", "vp9"],
+  "codec": "av1",
+  
+  "name_variables": ["<videoTitle>", "<selectedQuality>", "<selectedCodec>"],
+  "file_name": "<videoTitle> - <selectedQuality> - <selectedCodec>",
+
+  "audio_format_options": ["mp3", "ogg", "wav", "opus"],
+  "audio_format": "wav",
+  "mute_audio": false,
+
+  "overwrite_files": true,
+  "download_directory": "<defaultDirectory>",
+  "ask_for_input": false
+
+}

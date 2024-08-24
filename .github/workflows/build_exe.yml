@@ -27,12 +27,12 @@ jobs:
         run: |
           pyinstaller --onefile yt_monk/yt_monk.py
 
-      - name: List dist files
+      - name: Commit and Push EXE to Repository
         run: |
-          dir dist
-
-      - name: Upload exe artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: yt-monk-exe
-          path: dist/yt_monk.exe  # Ensure this matches the actual name of the output file
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/yt_monk.exe
+          git commit -m "Add built EXE file"
+          git push origin HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

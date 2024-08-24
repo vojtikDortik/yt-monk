@@ -126,7 +126,7 @@ pip install yt-monk
 
 ### Getting the Windows executable
 
-1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe)
+1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
 2. Run it on Windows
 3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
@@ -167,7 +167,7 @@ pip install yt-monk
 Here are some basic examples of using my code
 
 ### Using as an application
-When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
+When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
 
 <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/cmd_usage.png?raw=true" width=100% height=auto style="max-width: 800px">
 

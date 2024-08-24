@@ -22,24 +22,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#important">Important</a>
-    </li>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
-
 ## Important
 
 This is my first project uploaded to Github and PyPi. If you find a mistake, bug or just anything you don't like, please let me know and I'll try to fix it.

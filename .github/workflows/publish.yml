@@ -1,9 +1,9 @@
 name: Publish Python Package
 
 on:
-  push #:
-#    tags:
-#      - '0.1.1-alpha.1'
+  push :
+    tags:
+      - '0.1.1-alpha.1'
 jobs:
   build:
     runs-on: windows-latest

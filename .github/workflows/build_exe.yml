@@ -5,6 +5,9 @@ on:
 #    tags:
 #      - '0.1.1-alpha.1'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest

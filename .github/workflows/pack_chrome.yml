@@ -1,7 +1,12 @@
-name: Pack Chrome Extension
+name: Pack and Upload Chrome Extension
 
 on:
-  push
+  push:
+    tags:
+      - 'idk how to make it not run every time and idc tbh'
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -17,3 +22,13 @@ jobs:
       - name: Zip Chrome Extension
         run: |
           zip -r dist/chrome_extension.zip chrome_extension
+
+      - name: Commit and Push ZIP to Repository
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/chrome_extension.zip
+          git commit -m "Add packed Chrome Extension ZIP file"
+          git push origin HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

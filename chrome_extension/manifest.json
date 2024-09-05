@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Downloader",
+  "version": "0.2.1",
+  "description": "Download YouTube videos using the URL of the current tab.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "/images/logo-48px.png"
+  },
+  "icons": {
+    "48": "/images/logo-48px.png"
+  }
+}

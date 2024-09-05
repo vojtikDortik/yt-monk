@@ -1,0 +1,279 @@
+body { 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    background-color: #2d2d2d;
+    /* background-image: linear-gradient(to bottom left, #383434, #000000); */
+    color: white;
+    border: none; 
+    border-radius: 20px;
+    
+    margin: 0px; /* Remove default margin */
+    padding: 0px; /* Increase bottom padding slightly */
+    /* box-sizing: border-box; */
+
+    width: 410px;
+    height: 400px;
+
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    position: relative;
+}
+
+
+.large-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+
+.text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.light-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+
+input[type=text] {
+    width: 90%;
+    height: 100%;
+    padding: 7px; 
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.normal-input[type="text"] { 
+    background-color: #292929; 
+    border: 1px solid #454545;
+    color: #ffffff; 
+    
+}
+
+
+.input-error {
+    background-color: #810c0c; 
+    border: 1px solid #c31212; /* Add border width and style */
+    color: #ffffff;
+}
+
+
+
+
+.border-button { 
+    text-align: center;
+
+    border-radius: 15px;
+    padding: 7px;
+
+
+    background-color: #292929; 
+    border: 1px solid #454545;
+    color: #ffffff; 
+    
+    cursor: pointer; 
+    transition: transform 0.1s ease, filter 0.1s ease;
+    
+}
+
+.border-button:hover { 
+    background-color: #3e3e3e; 
+    color: #ffffff; 
+    transform: scale(1.05);
+}
+
+.border-button:disabled { 
+    background-color: #898989; 
+    color: #000000; 
+    border: 4px solid #454545;
+}
+
+.option-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: none;            
+  }
+
+.option-buttons-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+
+
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    height: auto;
+ 
+    background-color: #1c1c1c; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+
+}
+
+
+
+.title {
+    text-align: center;
+
+    margin: 0;
+    padding: 10px;
+    width: auto;
+    
+
+    /* background-color: #1c1c1c; */
+    color: white;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.input {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 10px;
+    width: auto;
+    
+
+    background-color: #1c1c1c; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+
+.svg-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+.rotating-icon {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+    filter: invert(1);
+}
+.svg-button:hover .rotating-icon { 
+    transform: scale(1.3) rotate(90deg);
+}
+
+
+
+.static-icon {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+    filter: invert(1);
+}
+.svg-button:hover .static-icon { 
+    transform: scale(1.3);
+}
+
+
+
+
+#closeOptionsBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#saveOptionsBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+select {
+    text-align: center;
+
+    border-radius: 15px;
+    padding: 7px;
+    width: fit-content;
+    height: auto;
+
+
+    background-color: #292929; 
+    border: 2px solid #454545;
+    color: #ffffff; 
+    
+    cursor: pointer; 
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+select:hover { 
+    background-color: #3e3e3e; 
+}
+
+
+
+
+
+    
+.main-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.options-panel {
+    position: fixed;
+    bottom: -100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    border-top: 4px solid #454545;
+    padding: 10px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease-in-out; /* Smooth transition for slide in/out */
+    /* visibility: hidden; Hide initially */
+}
+
+.options-panel.show {
+    bottom: 0; /* Slide up */
+}
+
+
+

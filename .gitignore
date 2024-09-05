@@ -3,8 +3,8 @@
 
 .vscode/
 
-build/
-yt_monk.specs
+saves
+saves/
 
 __pycache__
 

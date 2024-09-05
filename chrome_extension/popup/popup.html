@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Monk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="heading">
+            <button id="optionsBtn" class="svg-button"><img src="../images/options.svg" alt="Options" class="rotating-icon"></button>
+            <h1 class="title large-text">YouTube Monk</h1>
+            <button id="closeExtensionBtn" class="svg-button"><img src="../images/close.svg" alt="Close" class="rotating-icon"></button>
+        </div>
+
+        <div class="input">
+            <input id="input" class="normal-input light-text" type="text" placeholder="enter the url">
+            <button id="downloadBtn" class="text border-button" style="margin: 0; margin-bottom: 10px;">Download</button>
+        </div>          
+
+        
+    </div>
+    
+
+
+    <div id="optionsPanel" class="options-panel">
+        <h1 class="large-text" style="margin: 0;">Options</h1>
+        <div class="option-buttons">
+            <button id="closeOptionsBtn" class="svg-button"><img src="../images/close.svg" alt="Close options" class="rotating-icon"></button>
+            <button id="saveOptionsBtn" class="svg-button"><img src="../images/save.svg" alt="Save options" class="static-icon"></button>
+            
+            <!-- Add your options here -->
+            
+            <div class="option-buttons-row">
+                Video format:
+                <select id="codec" class="text">
+                    <option value="h264">H264</option>
+                    <option value="av1">AV1</option>
+                    <option value="vp9">VP9</option>
+                </select>
+            </div>
+            <div class="option-buttons-row">
+                Video quality:
+                <select id="quality" class="text">
+                    <option value="max">max</option>
+                    <option value="4k">4k</option>
+                    <option value="1440p">1440p</option>
+                    <option value="1080p">1080p</option>
+                    <option value="720p">720p</option>
+                    <option value="480p">480p</option>
+                    <option value="360p">360p</option>
+                    <option value="240p">240p</option>
+                    <option value="144p">144p</option>
+                </select>
+            </div>
+            <div class="option-buttons-row">
+                Audio format:
+                <select id="audioFormat" class="text">
+                    <option value="best">best</option>
+                    <option value="mp3">mp3</option>
+                    <option value="wav">wav</option>
+                    <option value="ogg">ogg</option>
+                    <option value="opus">opus</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+
+    <script src="popup.js"></script>
+</body>
+</html>
+

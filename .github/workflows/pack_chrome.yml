@@ -1,0 +1,19 @@
+name: Pack Chrome Extension
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create dist directory if not exists
+        run: mkdir -p dist
+
+      - name: Zip Chrome Extension
+        run: |
+          zip -r dist/chrome_extension.zip chrome_extension

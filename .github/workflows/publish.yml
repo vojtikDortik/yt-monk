@@ -3,7 +3,8 @@ name: Publish Python Package
 on:
   push :
     tags:
-      - '0.1.1-alpha.1'
+      - 'idk how to make it not run every time and idc tbh'
+
 jobs:
   build:
     runs-on: windows-latest

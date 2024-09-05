@@ -111,7 +111,7 @@ Then I just made some more functions.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Now you have 3 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that or you can install it as a python library and use it in your code.
+Now you have 4 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that. You can also install it as a python library and use it in your code. The final option and the most usable one is using it as a Chrome extension (but I am still working on that - it is still being developed).
 
 
 ### Getting the library
@@ -126,7 +126,7 @@ pip install yt-monk
 
 ### Getting the Windows executable
 
-1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
+1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)
 2. Run it on Windows
 3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
@@ -149,17 +149,25 @@ pip install yt-monk
 
 
 
+### Getting the Chrome extension
 
+1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/chrome_extension.zip) of the Chrome extension
 
+2. Unzip it
 
+3. Enable `Developer mode` in Chrome in the right top corner of [`chrome://extensions/`](chrome://extensions/)
 
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_developed_mode.png?raw=true" width=300px height=auto style="max-width: 300px">
 
+4. Click on `Load unpacked` in the left top corner
 
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_load_unpacked.png?raw=true" width=300px height=auto style="max-width: 450px">
 
+5. Select the extension directory (the directory that has `manifest.json` inside)
 
+6. That is it!
 
-
-
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_extension.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 
 <!-- USAGE EXAMPLES -->
@@ -268,9 +276,20 @@ downloader.downloadPlaylist(playlist_url)
 
 
 
+### Using the Chrome extension
 
+The extension has 2 main functions: a popup and adding a button directly to YouTube website
 
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/youtube_button.png?raw=true" width=100% height=auto >
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/popup.png?raw=true" width=300px height=auto style="max-width: 450px">
 
+When you open a youtube video, it automatically adds a button saying `MonkLoad` (because YT already has a download button, but it is for YouTube Premium only). If you click that button, it downloads the video using the default options.
+
+You can also click the extension in the right top corner to display a popup with pre-filled url of the video, or you can just enter it manually.
+
+You can edit the options using the popup window that will be used when downloading using the popup, but it will still (just for now) use the default options for downloading using the `MonkLoad` button. 
+
+``I will add more features and fix bugs - this is just a test version``
 
 
 <!-- LICENSE -->

@@ -1,9 +1,7 @@
 name: Pack and Upload Chrome Extension
 
 on:
-  push:
-    tags:
-      - 'idk how to make it not run every time and idc tbh'
+  push
 
 permissions:
   contents: write

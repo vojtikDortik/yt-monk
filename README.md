@@ -151,7 +151,7 @@ pip install yt-monk
 
 ### Getting the Chrome extension
 
-1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/chrome_extension.zip) of the Chrome extension
+1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) of the Chrome extension
 
 2. Unzip it
 

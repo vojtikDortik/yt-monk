@@ -157,13 +157,6 @@ input[type=text] {
 
 .input {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    margin: 10px;
-    width: auto;
     
 
     background-color: #1c1c1c; 
@@ -221,6 +214,16 @@ input[type=text] {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+#input {
+    margin: 10px;
+    width: auto;
+}
+
+#btnTextInput {
+    margin: 0px;
+    width: 20%;
 }
 
 

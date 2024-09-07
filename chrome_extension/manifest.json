@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "YouTube Monk",
   "version": "0.2.1",
-  "description": "Download YouTube videos using the URL of the current tab.",
+  "description": "Download YouTube directly from YouTube using a single button.",
   "permissions": [
     "scripting",
     "activeTab",
@@ -18,9 +18,9 @@
 
   "action": {
     "default_popup": "popup/popup.html",
-    "default_icon": "/images/logo-48px.png"
+    "default_icon": "/images/logo-round-48px.png"
   },
   "icons": {
-    "48": "/images/logo-48px.png"
+    "48": "/images/logo-round-48px.png"
   }
 }

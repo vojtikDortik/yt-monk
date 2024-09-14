@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "YouTube Monk",
   "version": "0.2.1",
-  "description": "Download YouTube directly from YouTube using a single button.",
+  "description": "Download YouTube videos directly from YouTube using a single button.",
   "permissions": [
     "scripting",
     "activeTab",

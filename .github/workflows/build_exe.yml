@@ -28,7 +28,8 @@ jobs:
 
       - name: Build the exe file
         run: |
-          pyinstaller --onefile yt_monk/yt_monk.py
+          pyinstaller --onefile yt_monk/yt_monk.py --hidden-import=pytube
+
 
       - name: Commit and Push EXE to Repository
         run: |

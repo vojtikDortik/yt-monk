@@ -126,7 +126,7 @@ pip install yt-monk
 
 ### Getting the Windows executable
 
-1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)
+1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
 2. Run it on Windows
 3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 

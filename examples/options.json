@@ -9,7 +9,7 @@
   "codec": "h264",
   
   "name_variables": ["<videoTitle>", "<selectedQuality>", "<selectedCodec>"],
-  "file_name": "<videoTitle> - <selectedQuality> - <selectedCodec>",
+  "file_name": "<videoTitle>",
 
   "audio_format_options": ["mp3", "ogg", "wav", "opus"],
   "audio_format": "wav",

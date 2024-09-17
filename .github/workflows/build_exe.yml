@@ -34,6 +34,7 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --no-edit
           git add dist/yt_monk.exe
           git commit -m "Add built EXE file"
           git push origin HEAD:master

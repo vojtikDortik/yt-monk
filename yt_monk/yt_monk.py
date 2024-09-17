@@ -45,7 +45,7 @@ class Downloader:
         allowed_codecs = ["h264", "av1", "vp9"]
         allowed_audio_formats = ["mp3", "ogg", "wav", "opus"]
 
-        default_codec = "av1"
+        default_codec = "h264"
         default_quality = "1080"
         default_file_name = "<videoTitle> - <selectedQuality>"
         default_file_type = "video"
@@ -376,6 +376,7 @@ class Downloader:
         if '<videoTitle>' in filename and url is not None:
             name_variables_dict['<videoTitle>'] = self.getVideoTitle(url)
         else: name_variables_dict['<videoTitle>'] = 'badVideoTitle'
+
         name_variables_dict['<selectedCodec>'] = self.options.codec
         name_variables_dict['<selectedQuality>'] = self.options.quality + 'p'
         

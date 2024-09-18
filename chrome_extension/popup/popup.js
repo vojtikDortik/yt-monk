@@ -19,10 +19,22 @@ async function getStreamUrl(apiUrl, options) {
     });
 
     if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.statusText}`);
+      console.log('trying again')
+      let response = await fetch(apiUrl, {
+        method: "POST",
+        body: JSON.stringify(options),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
     }
 
     let data = await response.json();
+    console.log(data.status, data)
     if (data.status === "stream" && data.url) {
       return data.url;
     } else {
@@ -63,7 +75,7 @@ function listen() {
         (items) => {
           // download section
           btn.disabled = true;
-          btn.innerText = "Downloading...";
+          btn.innerText = "Downloading";
 
           // Use saved options
           let options = {
@@ -126,7 +138,7 @@ function listen() {
     const codec = document.getElementById("codec").value;
     const audioFormat = document.getElementById("audioFormat").value;
 
-    chrome.storage.sync.set({ quality, codec, audioFormat, edited: true }, () => {
+    chrome.storage.sync.set({ quality, codec, audioFormat}, () => {
       console.log("Options saved");
     });
   });

@@ -11,7 +11,9 @@
 
 
   <p align="center">
-    A YouTube video and playlist downloader made in Python.
+    <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/logo_transparent_full_size.png?raw=true" width=auto height=100% style="max-width: 500px">
+    <br />
+    A YouTube video and playlist downloader made in Python (or JS).
     <br />
     <br />
     <a href="https://github.com/vojtikDortik/yt-monk/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
@@ -29,6 +31,7 @@
     <li>
       <a href="#important">Important</a>
     </li>
+    <li><a href="#downloads">Downloads</a></li>
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
@@ -43,6 +46,53 @@
 ## Important
 
 This is my first project uploaded to Github and PyPi. If you find a mistake, bug or just anything you don't like, please let me know and I'll try to fix it.
+
+`This is still a test version.`
+
+
+
+## Downloads
+#### TL;DR:
+
+### Chrome extension 
+This is probalby the most usable part of my project. You can download the video directly on YouTube using a button added by the JavaScript code. You can also change the options in the popup. 
+
+[Download zip](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) and follow the <a href="#getting-started">`instructions`</a> or install on `Chrome Store` (I'll add this soon)
+
+
+### Python library 
+This is very useful for writing your own code with downloading youtube videos. For more info about the library, check the <a href="#usage">`usage`</a>. 
+
+`Install using pip:`
+```sh
+pip install yt-monk
+```
+
+PyPi project site: [`yt-monk`](https://pypi.org/project/yt-monk/)
+
+
+
+### Simple EXE file
+This is just a test of windows executable app. It can download videos and playlists. You can not set the options yet - it is using the defaults. 
+
+[Download here](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe) 
+
+### Simple Python file
+This is basically the same as the EXE file, nut it is not built to EXE, so you can view and edit the code. You can use custom settings if you download the example `options.json` file and add `json_path='path_to/options.json'` argument to the main function.
+
+`Downloading:`\
+The code: [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py)\
+Requiered libraries: [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)\
+The options file: [`options.json`](https://github.com/vojtikDortik/yt-monk/blob/master/examples/options.json)
+
+
+
+
+
+
+
+<br>
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -96,8 +146,8 @@ Then I just made some more functions.
 
 ### To-do 
 
-- [ ] Make a cli app
-- [ ] Make a js chrome extension 
+- [ ] Upload extension to chrome store
+- [x] Make a js chrome extension 
 - [x] Make an exe app
 - [x] Reorganize files
 - [x] Make a python package work
@@ -111,8 +161,32 @@ Then I just made some more functions.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Now you have 4 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that. You can also install it as a python library and use it in your code. The final option and the most usable one is using it as a Chrome extension (but I am still working on that - it is still being developed).
+Now you have 4 options: download it as an exe file and run it on Windows without the need to install Python or you can download the Python file and run that. You can also install it as a python library and use it in your code. The final option and the most usable one is using it as a Chrome extension (I am still working on that - it is test version).
 
+### Getting the Chrome extension
+
+
+I will upload it to Chrome Store soon (hopefully)
+
+<br>
+
+1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) of the Chrome extension
+
+2. Unzip it
+
+3. Enable `Developer mode` in Chrome in the right top corner of [`chrome://extensions/`](chrome://extensions/)
+
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_developed_mode.png?raw=true" width=300px height=auto style="max-width: 300px">
+
+4. Click on `Load unpacked` in the left top corner
+
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_load_unpacked.png?raw=true" width=300px height=auto style="max-width: 450px">
+
+5. Select the extension directory (the directory that has `manifest.json` inside)
+
+6. That is it!
+
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_extension.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 ### Getting the library
 
@@ -149,30 +223,7 @@ pip install yt-monk
 
 
 
-### Getting the Chrome extension
 
-
-I will upload it to Chrome Store soon (hopefully)
-
-<br>
-
-1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) of the Chrome extension
-
-2. Unzip it
-
-3. Enable `Developer mode` in Chrome in the right top corner of [`chrome://extensions/`](chrome://extensions/)
-
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_developed_mode.png?raw=true" width=300px height=auto style="max-width: 300px">
-
-4. Click on `Load unpacked` in the left top corner
-
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_load_unpacked.png?raw=true" width=300px height=auto style="max-width: 450px">
-
-5. Select the extension directory (the directory that has `manifest.json` inside)
-
-6. That is it!
-
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_extension.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 
 <!-- USAGE EXAMPLES -->

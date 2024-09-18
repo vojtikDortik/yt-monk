@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Monk",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Download YouTube videos directly from YouTube using a single button.",
   "permissions": [
     "scripting",
@@ -18,9 +18,15 @@
 
   "action": {
     "default_popup": "popup/popup.html",
-    "default_icon": "/images/logo-round-48px.png"
+    "default_icon": {
+      "16": "images/logo_16px.png",
+      "48": "images/logo_48px.png",
+      "128": "images/logo_128px.png"
+    }
   },
   "icons": {
-    "48": "/images/logo-round-48px.png"
+    "16": "images/logo_16px.png",
+    "48": "images/logo_48px.png",
+    "128": "images/logo_128px.png"
   }
 }

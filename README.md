@@ -11,7 +11,7 @@
 
 
   <p align="center">
-    <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/logo_transparent_full_size.png?raw=true" width=auto height=100% style="max-width: 500px">
+    <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/logo_transparent_full_size.png?raw=true" width=50% height=auto>
     <br />
     A YouTube video and playlist downloader made in Python (or JS).
     <br />

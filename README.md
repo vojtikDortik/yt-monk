@@ -78,7 +78,7 @@ This is just a test of windows executable app. It can download videos and playli
 [Download here](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe) 
 
 ### Simple Python file
-This is basically the same as the EXE file, nut it is not built to EXE, so you can view and edit the code. You can use custom settings if you download the example `options.json` file and add `json_path='path_to/options.json'` argument to the main function.
+This is basically the same as the EXE file, but it is not built to EXE, so you can view and edit the code. You can use custom settings if you download the example `options.json` file and add `json_path='path_to/options.json'` argument to the main function.
 
 `Downloading:`\
 The code: [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py)\

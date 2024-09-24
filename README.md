@@ -336,16 +336,17 @@ downloader.downloadPlaylist(playlist_url)
 
 The extension has 2 main functions: a popup and adding a button directly to YouTube website
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/youtube_button.png?raw=true" width=100% height=auto >
+<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/screenshot_button_2.png?raw=true" width=100% height=auto >
 <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/popup.png?raw=true" width=300px height=auto style="max-width: 450px">
 
-When you open a youtube video, it automatically adds a button saying `MonkLoad` (because YT already has a download button, but it is for YouTube Premium only). If you click that button, it downloads the video using the default options.
+When you open a youtube video, it automatically adds a button saying `MonkLoad`, but you can change that text in the popup options. If you click that button, it downloads the video using the default options.
 
 You can also click the extension in the right top corner to display a popup with pre-filled url of the video, or you can just enter it manually.
 
-You can edit the options using the popup window that will be used when downloading using the popup, but it will still (just for now) use the default options for downloading using the `MonkLoad` button. 
+You can edit the options using the popup window. 
 
-``I will add more features and fix bugs - this is just a test version``
+
+``try turning on the cats button :)``
 
 
 <!-- LICENSE -->

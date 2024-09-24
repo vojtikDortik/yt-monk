@@ -16,8 +16,20 @@
         <div class="input-container">
             <input id="input" class="normal-input light-text" type="text" placeholder="enter the url">
             <button id="downloadBtn" class="text border-button" >Download</button> <!-- style="margin: 0; margin-bottom: 10px;" --> 
-        </div>          
+        </div>
+        <p id="errors" class="light-text"></p>
+        
+        <div id="imgContainer" style="display: flex; justify-content: center;">
+            <!-- <img id="catImg" src="https://cataas.com/cat" alt="cat" height="180px" style="max-width: 100%;"> -->
+        </div>
 
+        <div id="catsButtonContainer">
+            <p class="light-text" style="margin-right: 7px;">cats</p>
+            <label class="switch" id="catsButton">
+                <input type="checkbox" id="catsCheckbox">
+                <span class="slider"></span>
+            </label>
+        </div>
         
     </div>
     
@@ -43,14 +55,14 @@
                 Video quality:
                 <select id="quality" class="text">
                     <option value="max">max</option>
-                    <option value="4k">4k</option>
-                    <option value="1440p">1440p</option>
-                    <option value="1080p">1080p</option>
-                    <option value="720p">720p</option>
-                    <option value="480p">480p</option>
-                    <option value="360p">360p</option>
-                    <option value="240p">240p</option>
-                    <option value="144p">144p</option>
+                    <option value="2160">4k</option>
+                    <option value="1440">1440p</option>
+                    <option value="1080">1080p</option>
+                    <option value="720">720p</option>
+                    <option value="480">480p</option>
+                    <option value="360">360p</option>
+                    <option value="240">240p</option>
+                    <option value="144">144p</option>
                 </select>
             </div>
             <div class="option-buttons-row">
@@ -65,7 +77,17 @@
             </div>
 
             <div class="option-buttons-row">
-                Button text:
+                File type:
+                <select id="fileType" class="text">
+                    <option value="video">video</option>
+                    <option value="audio">audio</option>
+                </select>
+            </div>
+
+            <hr width="100%">
+
+            <div class="option-buttons-row" style="margin-top: 0; padding-top: 0;">
+                <p class="options-text">Button text:</p>
                 <input id="btnTextInput" class="light-text" type="text" placeholder="MonkLoad">
 
             </div>

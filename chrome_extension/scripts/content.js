@@ -11,19 +11,40 @@ function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 }
 
+function getOptions() {
+  return new Promise((resolve) => {
+    chrome.storage.sync.get(
+      { quality: "1080", codec: "h264", audioFormat: "wav", fileType: "video" }, // Default values
+      (items) => {
+        // Assign the retrieved values
+        const quality = items.quality;
+        const codec = items.codec;
+        const audioFormat = items.audioFormat;
+        const audioOnly = (items.fileType == "audio");
 
+        console.log("lol", quality, codec, audioFormat);
+        resolve({ quality, codec, audioFormat, audioOnly });
+      }
+    );
+  });
+}
 
 async function downloadVideo(url) {
   const apiUrl = 'https://olly.imput.net/api/json';
 
+
   try {
+    const { quality, codec, audioFormat, audioOnly } = await getOptions(); // Wait for the options to be retrieved
+
+    console.log("Retrieved options:", quality, codec, audioFormat, audioOnly);
+
     const options = {
       url: url,
-      vCodec: 'h264',
-      vQuality: '1080',
-      aFormat: 'wav',
-      filenamePattern: 'pretty',
-      isAudioOnly: false,
+      vCodec: codec,
+      vQuality: quality,
+      aFormat: audioFormat,
+      filenamePattern: 'basic',
+      isAudioOnly: audioOnly,
       isTTFullAudio: false,
       isAudioMuted: false,
       disableMetadata: false,
@@ -61,8 +82,12 @@ function addCustomButton() {
   const btn = document.createElement('button');
   btn.id = 'yt-monk-download';
   btn.className = 'yt-spec-button-shape-next yt-spec-button-shape-next--tonal yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-leading';
-  btn.setAttribute('aria-label', 'MonkLoad');
-  btn.setAttribute('title', 'MonkLoad');
+  chrome.storage.sync.get(
+    {buttonText: "MonkLoad" }, // Default values
+    (items) => { 
+      btn.setAttribute('aria-label', items.buttonText);
+      btn.setAttribute('title', items.buttonText);
+    });
   btn.style.marginLeft = '6px';
   btn.style.marginRight = '6px';
 
@@ -101,7 +126,10 @@ function addCustomButton() {
 
   const textContent = document.createElement('div');
   textContent.className = 'yt-spec-button-shape-next__button-text-content';
-  textContent.innerText = 'MonkLoad';
+  chrome.storage.sync.get(
+    {buttonText: "MonkLoad" }, // Default values
+    (items) => { textContent.innerText = items.buttonText; });
+      
   btn.appendChild(textContent);
 
   const feedbackShape = document.createElement('yt-touch-feedback-shape');

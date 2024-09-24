@@ -29,7 +29,7 @@ async function getStreamUrl(apiUrl, options) {
         },
       });
       if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.statusText}`);
+        throw new Error(`Network response was not ok ${response.statusText}`);
       }
     }
 
@@ -58,11 +58,29 @@ async function downloadStream(streamUrl) {
   }
 }
 
+
+function showCat() {
+  const imgContainer = document.getElementById('imgContainer');
+  const img = document.createElement('img');
+  
+  img.src = 'https://cataas.com/cat';
+  img.alt="cat"; 
+  img.style.height = "180px"; 
+  img.style.maxWidth = "100%";
+  img.style.borderRadius = "20px"
+  img.id = "catImg"
+
+  imgContainer.appendChild(img);
+}
+
 function listen() {
   document.getElementById("downloadBtn").addEventListener("click", async function () {
     const input = document.getElementById("input");
     input.classList.remove("input-error");
     input.classList.add("normal-input");
+
+    const errorText = document.getElementById("errors");
+    errorText.textContent = "";
 
     const url = input.value;
     const apiUrl = "https://olly.imput.net/api/json";
@@ -71,20 +89,27 @@ function listen() {
     try {
       // Retrieve saved options before downloading
       chrome.storage.sync.get(
-        { quality: "1080", codec: "h264", audioFormat: "wav" }, // Default values
+        { quality: "1080", codec: "h264", audioFormat: "wav", fileType: "video" }, // Default values
         (items) => {
           // download section
           btn.disabled = true;
           btn.innerText = "Downloading";
 
+          let audioOnly = false;
+          if (items.fileType == "audio"){
+            audioOnly = true;
+          }
+
+
           // Use saved options
           let options = {
             url: url,
-            vCodec: items.codec || "h264",
-            vQuality: items.quality || "1080",
-            aFormat: items.audioFormat || "wav",
-            filenamePattern: "pretty",
-            isAudioOnly: false,
+            vCodec: items.codec,
+            vQuality: items.quality,
+            aFormat: items.audioFormat,
+            filenamePattern: "basic",
+
+            isAudioOnly: audioOnly,
             isTTFullAudio: false,
             isAudioMuted: false,
             disableMetadata: false,
@@ -97,6 +122,8 @@ function listen() {
               console.error(error);
               input.classList.remove("normal-input");
               input.classList.add("input-error");
+              errorText.textContent = error;
+
             })
             .finally(() => {
               btn.disabled = false;
@@ -107,6 +134,7 @@ function listen() {
     } catch (error) {
       input.classList.remove("normal-input");
       input.classList.add("input-error");
+      errorText.textContent = error;
       btn.disabled = false;
       btn.innerText = "Download";
     }
@@ -116,11 +144,14 @@ function listen() {
     document.getElementById("optionsPanel").classList.add("show");
 
     chrome.storage.sync.get(
-      { quality: "1080", codec: "h264", audioFormat: "wav" }, // Default values
+      { quality: "1080", codec: "h264", audioFormat: "wav", fileType: "video", buttonText: "MonkLoad" }, // Default values
       (items) => {
         document.getElementById("quality").value = items.quality;
+        console.log(items.quality);
         document.getElementById("codec").value = items.codec;
         document.getElementById("audioFormat").value = items.audioFormat;
+        document.getElementById("fileType").value = items.fileType;
+        document.getElementById("btnTextInput").value = items.buttonText;
       }
     );
   });
@@ -137,11 +168,32 @@ function listen() {
     const quality = document.getElementById("quality").value;
     const codec = document.getElementById("codec").value;
     const audioFormat = document.getElementById("audioFormat").value;
+    const buttonText = document.getElementById("btnTextInput").value;
+    const fileType = document.getElementById("fileType").value;
 
-    chrome.storage.sync.set({ quality, codec, audioFormat}, () => {
+    chrome.storage.sync.set({ quality, codec, audioFormat, fileType, buttonText}, () => {
       console.log("Options saved");
     });
   });
+
+  document.getElementById("catsCheckbox").addEventListener("click", function () {
+    const checkbox = document.getElementById('catsCheckbox');
+    const cats = checkbox.checked
+    chrome.storage.sync.set({cats}, () => {});
+
+    const img = document.getElementById('catImg');
+
+    if (cats) {
+      showCat();
+    }
+    else if(img) {
+      img.remove();
+    }
+  });
+
+
+
+
 }
 
 getTabUrl(function (url) {
@@ -149,6 +201,17 @@ getTabUrl(function (url) {
   if (url.startsWith("https://www.youtube.com/watch?")) {
     input.value = url;
   }
+  chrome.storage.sync.get({ cats: false }, (items) => {
+    const checkbox = document.getElementById('catsCheckbox');
+    checkbox.checked = items.cats;
+
+    if (items.cats) {
+      showCat();
+    }
+  });
 
   listen();
 });
+
+
+

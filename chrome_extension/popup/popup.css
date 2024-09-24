@@ -133,12 +133,30 @@ input[type=text] {
     justify-content: space-between;
     flex: 1;
     
-    margin: 10px;
+    margin: 5px;
     padding-left: 10px;
-    padding-right: 50px;
+    padding-right: 10px;
 }
 
+#btnTextInput {
+    background-color: #292929;
+    border: 1px solid #454545;
+    color: white;
+    padding: 8px;
+    border-radius: 15px;
+    width: 125%;
+    flex-grow: 1;
 
+}
+
+.options-text {
+    width: 75%;
+}
+
+#errors {
+    color: #ff0000;
+    text-align: center;
+}
 
 
 .heading {
@@ -238,10 +256,6 @@ input[type=text] {
     transition: transform 0s;
 }
 
-#btnTextInput {
-    margin: 0px;
-    width: 20%;
-}
 
 
 
@@ -294,6 +308,88 @@ select:hover {
 .options-panel.show {
     bottom: 0; /* Slide up */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* The switch - the container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    margin: 0;
+  }
+  
+  /* Hide the default HTML checkbox */
+  .switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1a1a;
+
+    transition: .25s;
+    border-radius: 20px;
+  }
+  
+  /* Slider handle */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    border: 1px solid #303030;
+    background-color: #303030;
+    transition: .25s;
+    border-radius: 50%;
+  }
+  
+  /* On state */
+  input[type="checkbox"]:checked + .slider {
+    background-color: #676767;
+  }
+  
+  /* Move the slider handle when checked */
+  input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(15px);
+  }
+  
+
+
+
+#catsButtonContainer {
+    position: absolute;
+    height: auto;
+    bottom: 0px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
 
 
 

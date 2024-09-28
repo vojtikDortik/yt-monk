@@ -15,21 +15,18 @@
     <br />
     <br />
     <a href="https://github.com/vojtikDortik/yt-monk/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
+    -
     <a href="https://github.com/vojtikDortik/yt-monk/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
 
 
-## Important
-
-This is my first project uploaded to Github and PyPi. If you find a mistake, bug or just anything you don't like, please let me know and I'll try to fix it.
 
 <!-- GETTING STARTED -->
 ## Installing the library
 
-To install [the library](https://pypi.org/project/yt-monk/) from PyPi, just run this command:
+To install the library from PyPi, just run this command:
 
 ```sh
 pip install yt-monk
@@ -53,7 +50,7 @@ downloader = yt_monk.Downloader()
 
 #### Setting the options:
 
-You can set it using keyword arguments when defining the object:
+You can set the options using keyword arguments when defining the object:
 
 ```python
 downloader = yt_monk.Downloader(quality='720', codec='av1')

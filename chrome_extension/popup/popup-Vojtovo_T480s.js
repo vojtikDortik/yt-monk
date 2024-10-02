@@ -36,7 +36,6 @@ async function getStreamUrl(apiUrl, options) {
     let data = await response.json();
     console.log(data.status, data)
     if (data.status === "stream" && data.url) {
-      console.log(data.status);
       return data.url;
     } else {
       throw new Error("Stream URL not available or incorrect status");
@@ -182,12 +181,13 @@ function listen() {
     const cats = checkbox.checked
     chrome.storage.sync.set({cats}, () => {});
 
-    const img = document.getElementById('catImg');
+    const img = document.getElementById("catImg");
 
     if (cats) {
       showCat();
     }
-    else if(img) {
+    else {
+      console.log(img.id);
       img.remove();
     }
   });

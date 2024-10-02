@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouTube Monk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="title">YouTube Monk</h1>
+        <p class="large-text">A Simple YouTube Video and Playlist Downloader</p>
+    </header>
+
+    <section class="main-content">
+        <h2 class="text">Download Links</h2>
+        <p class="light-text">Select the version of the application that suits your needs:</p>
+        
+        <div class="download-buttons">
+            <a href="https://raw.githubusercontent.com/vojtikDortik/yt-monk/master/dist/chrome_extension.zip" class="border-button" download>Chrome Extension</a>
+            <a href="https://raw.githubusercontent.com/vojtikDortik/yt-monk/master/dist/yt_monk.exe" class="border-button" download>EXE File</a>
+            <a href="https://raw.githubusercontent.com/vojtikDortik/yt-monk/master/yt_monk/yt_monk.py" class="border-button" download>Python Script</a>
+            <a href="https://pypi.org/project/yt-monk/" class="border-button" target="_blank">PyPi Package</a>
+        </div>
+
+        
+        
+        <h2 class="text">About YouTube Monk</h2>
+        <p class="light-text">
+            YouTube Monk is a lightweight tool to download YouTube videos and playlists. You can use the Chrome extension 
+            directly on YouTube, the Python library to build your own scripts, or a Windows executable to download with ease.
+        </p>
+        <p class="light-text">Feel free to report bugs or request features!</p>
+        
+        <h2 class="text">Getting Started</h2>
+        <p class="light-text">
+            Choose your preferred method: Chrome extension for easy video downloads, the Python package for code integration, 
+            or the EXE for a quick and simple experience.
+        </p>
+    </section>
+
+    <footer style="position: absolute; bottom: 0; width: 100%;">
+        <p class="light-text">© 2024 YouTube Monk | MIT License</p>
+    </footer>
+
+    <!-- Overlay Structure -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <button class="close-button" onclick="closeOverlay()">Close</button>
+            <div id="overlay-text"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the new JS file -->
+</body>
+</html>

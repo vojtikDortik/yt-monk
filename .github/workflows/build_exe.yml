@@ -1,9 +1,9 @@
 name: Build exe file
 
 on:
-  push :
-    tags:
-      - 'idk how to make it not run every time and tbh idc'
+  push #:
+    #tags:
+      #- 'idk how to make it not run every time and tbh idc'
 
 permissions:
   contents: write

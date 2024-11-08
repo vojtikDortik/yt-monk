@@ -45,19 +45,16 @@
 
 ## Important
 
-This is my first project uploaded to Github and PyPi. If you find a mistake, bug or just anything you don't like, please let me know and I'll try to fix it.
-
-`This is still a test version.`
+!! - This doesn't work anymore. sorry. I might try to make it work again, but not for now - !!
 
 
 
 ## Downloads
 #### TL;DR:
 
-### Chrome extension - doesn't work anymore, needs an update
+### Chrome extension
 This is probalby the most usable part of my project. You can download the video directly on YouTube using a button added by the JavaScript code. You can also change the options in the popup. 
 
-`!! chrome extension doesn't working anymore !!`
 
 [Download zip](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) and follow the <a href="#getting-started">`instructions`</a> or install on `Chrome Store` (I'll add this soon)
 

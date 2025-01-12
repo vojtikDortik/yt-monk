@@ -203,7 +203,7 @@ pip install yt-monk
 
 1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
 2. Run it on Windows
-3. Windows might mark it as a , so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
+3. Windows might mark it as a potential threat, so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
     If you realy don't trust it (I get it), you can download the python code or the [PyPi package](https://pypi.org/project/yt-monk/)
 

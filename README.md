@@ -11,14 +11,14 @@
 
 
   <p align="center">
-    <img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/logo_transparent_full_size.png?raw=true" width=50% height=auto>
+    <img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/logo_transparent_full_size.png?raw=true" width=50% height=auto>
     <br />
     A YouTube video and playlist downloader made in Python (or JS).
     <br />
     <br />
-    <a href="https://github.com/vojtikDortik/yt-monk/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/jsem-nerad/yt-monk/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/vojtikDortik/yt-monk/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/jsem-nerad/yt-monk/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -58,7 +58,7 @@
 This is probalby the most usable part of my project. You can download the video directly on YouTube using a button added by the JavaScript code. You can also change the options in the popup. 
 
 
-[Download zip](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) and follow the <a href="#getting-started">`instructions`</a> or install on `Chrome Store` (I'll add this soon)
+[Download zip](https://github.com/jsem-nerad/yt-monk/blob/master/dist/chrome_extension.zip) and follow the <a href="#getting-started">`instructions`</a> or install on `Chrome Store` (I'll add this soon)
 
 
 ### Python library 
@@ -76,15 +76,15 @@ PyPi project site: [`yt-monk`](https://pypi.org/project/yt-monk/)
 ### Simple EXE file
 This is just a test of windows executable app. It can download videos and playlists. You can not set the options yet - it is using the defaults. 
 
-[Download here](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe) 
+[Download here](https://github.com/jsem-nerad/yt-monk/blob/master/dist/yt_monk.exe) 
 
 ### Simple Python file
 This is basically the same as the EXE file, but it is not built to EXE, so you can view and edit the code. You can use custom settings if you download the example `options.json` file and add `json_path='path_to/options.json'` argument to the main function.
 
 `Downloading:`\
-The code: [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py)\
-Requiered libraries: [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)\
-The options file: [`options.json`](https://github.com/vojtikDortik/yt-monk/blob/master/examples/options.json)
+The code: [`yt_monk.py`](https://github.com/jsem-nerad/yt-monk/blob/master/yt_monk/yt_monk.py)\
+Requiered libraries: [`requirements.txt`](https://github.com/jsem-nerad/yt-monk/blob/master/requirements.txt)\
+The options file: [`options.json`](https://github.com/jsem-nerad/yt-monk/blob/master/examples/options.json)
 
 
 
@@ -100,7 +100,7 @@ The options file: [`options.json`](https://github.com/vojtikDortik/yt-monk/blob/
 
 This little project began when I wanted to download a playlist from YouTube. For downloading single videos, I always use [cobalt.tools](https://cobalt.tools), because it is ad-free and open-source, but it is still missing something... a playlist downloader. I tried a few other YT downloaders to download a playlist, but I wasn't happy with their functionality. 
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/cobalt.png?raw=true" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/cobalt.png?raw=true" width=100% height=auto style="max-width: 800px">
 
 ([cobalt](https://cobalt.tools) website)
 
@@ -109,17 +109,17 @@ So I decided to make my own YT video and playlist downloader in Python.
 ### Making the program
 First, I downloaded a [testing video](https://www.youtube.com/watch?v=9bZkp7q19f0) and captured the network traffic from [cobalt](https://cobalt.tools), because I wanted to know how do they download videos:
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/network.png?raw=true" width=auto height=100% style="max-height: 200px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/network.png?raw=true" width=auto height=100% style="max-height: 200px">
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/request.png?raw=true" width=auto height=100% style="max-height: 250px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/request.png?raw=true" width=auto height=100% style="max-height: 250px">
 
 (the network traffic capture)
 
 Based on that capture, I found out, that the user recieves the video as a stream of data from `olly.imput.net/api`. Now I need to know how to make the request to their API to get the stream URL, so I looked into the JavaScript code, that was downloading the videos:
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/code1.png?raw=true" width=100% height=auto style="max-width: 700px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/code1.png?raw=true" width=100% height=auto style="max-width: 700px">
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/code2.png?raw=true" width=100% height=auto style="max-width: 450px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/code2.png?raw=true" width=100% height=auto style="max-width: 450px">
 
 (some of the JavaScript code of the website)
 
@@ -171,23 +171,23 @@ I will upload it to Chrome Store soon (hopefully)
 
 <br>
 
-1. Download the [zipped version](https://github.com/vojtikDortik/yt-monk/blob/master/dist/chrome_extension.zip) of the Chrome extension
+1. Download the [zipped version](https://github.com/jsem-nerad/yt-monk/blob/master/dist/chrome_extension.zip) of the Chrome extension
 
 2. Unzip it
 
 3. Enable `Developer mode` in Chrome in the right top corner of [`chrome://extensions/`](chrome://extensions/)
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_developed_mode.png?raw=true" width=300px height=auto style="max-width: 300px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/chrome_developed_mode.png?raw=true" width=300px height=auto style="max-width: 300px">
 
 4. Click on `Load unpacked` in the left top corner
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_load_unpacked.png?raw=true" width=300px height=auto style="max-width: 450px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/chrome_load_unpacked.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 5. Select the extension directory (the directory that has `manifest.json` inside)
 
 6. That is it!
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/chrome_extension.png?raw=true" width=300px height=auto style="max-width: 450px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/chrome_extension.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 ### Getting the library
 
@@ -201,7 +201,7 @@ pip install yt-monk
 
 ### Getting the Windows executable
 
-1. Download [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe)
+1. Download [`yt_monk.exe`](https://github.com/jsem-nerad/yt-monk/blob/master/dist/yt_monk.exe)
 2. Run it on Windows
 3. Windows might mark it as a potential threat, so just click on `More info` and then click on `Run anyway` (I could try to fix that, but it is not my main goal now and also idk how to fix it)
 
@@ -209,9 +209,9 @@ pip install yt-monk
 
 ### Getting the Python file
 
-1. Download [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) and [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt)
+1. Download [`yt_monk.py`](https://github.com/jsem-nerad/yt-monk/blob/master/yt_monk/yt_monk.py) and [`requirements.txt`](https://github.com/jsem-nerad/yt-monk/blob/master/requirements.txt)
 
-2. Install [`requirements.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/requirements.txt) using pip:
+2. Install [`requirements.txt`](https://github.com/jsem-nerad/yt-monk/blob/master/requirements.txt) using pip:
     ```sh
     pip install -r requirements.txt
     ```
@@ -232,9 +232,9 @@ pip install yt-monk
 Here are some basic examples of using my code
 
 ### Using as an application
-When you run [`yt_monk.py`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/vojtikDortik/yt-monk/blob/master/dist/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
+When you run [`yt_monk.py`](https://github.com/jsem-nerad/yt-monk/blob/master/yt_monk/yt_monk.py) or [`yt_monk.exe`](https://github.com/jsem-nerad/yt-monk/blob/master/dist/yt_monk.exe) or use the [package](https://pypi.org/project/yt-monk/) as a cli app, you will get prompted to enter the URL
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/cmd_usage.png?raw=true" width=100% height=auto style="max-width: 800px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/cmd_usage.png?raw=true" width=100% height=auto style="max-width: 800px">
 
 You can enter video or playlist URL (the program will detect the URL type) or `q` to quit the loop.
 
@@ -295,7 +295,7 @@ ask_for_input -> if enabled, the code will ask whether or not to overwrite a fil
 <br>
 
 #### Using JSON options file:
-Alternatively, you can use a json file to set the options. You can download an example [`options.json`](https://github.com/vojtikDortik/yt-monk/blob/master/yt_monk/options.json) file here. Then just tell the code to use the JSON file:
+Alternatively, you can use a json file to set the options. You can download an example [`options.json`](https://github.com/jsem-nerad/yt-monk/blob/master/yt_monk/options.json) file here. Then just tell the code to use the JSON file:
 
 ```python
 downloader = yt_monk.Downloader(json_path=r'path/to/options.json')
@@ -337,8 +337,8 @@ downloader.downloadPlaylist(playlist_url)
 
 The extension has 2 main functions: a popup and adding a button directly to YouTube website
 
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/screenshot_button_2.png?raw=true" width=100% height=auto >
-<img src="https://github.com/vojtikDortik/yt-monk/blob/master/images/popup.png?raw=true" width=300px height=auto style="max-width: 450px">
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/screenshot_button_2.png?raw=true" width=100% height=auto >
+<img src="https://github.com/jsem-nerad/yt-monk/blob/master/images/popup.png?raw=true" width=300px height=auto style="max-width: 450px">
 
 When you open a youtube video, it automatically adds a button saying `MonkLoad`, but you can change that text in the popup options. If you click that button, it downloads the video using the default options.
 
@@ -353,7 +353,7 @@ You can edit the options using the popup window.
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/vojtikDortik/yt-monk/blob/master/LICENSE.txt) for more information
+Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/jsem-nerad/yt-monk/blob/master/LICENSE.txt) for more information
 
 
 
